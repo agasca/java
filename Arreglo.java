@@ -44,6 +44,7 @@ class Arreglo {
 }
 
 /*
+ *
  * public static void main(String[]args) { //Arreglos: tipos de declaracion
  * //opc 1 //String leyendasA[]; //leyendasA = new String[5] //opc 2 //String
  * leyendasA[] = new String[5]; //opc 3 //int [a] = new int[5], int b[] = new
