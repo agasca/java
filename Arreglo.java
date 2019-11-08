@@ -28,10 +28,9 @@ class Arreglo {
         }
         for (int i = 1; i <= renglones; i++) {
             for (int j = 1; j <= orden; j++) {
+                System.out.print(leyendasA[kIndiceLetraAB] + i + leyendasXY[kIndiceLetraAB]);
                 if (j != orden) {
-                    System.out.print(leyendasA[kIndiceLetraAB] + i + leyendasXY[kIndiceLetraAB] + " + ");
-                } else {
-                    System.out.print(leyendasA[kIndiceLetraAB] + i + leyendasXY[kIndiceLetraAB]);
+                    System.out.print(" + ");
                 }
                 // salta letra a,b,..,z
                 kIndiceLetraAB++;
