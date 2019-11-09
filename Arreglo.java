@@ -1,4 +1,5 @@
 class Arreglo {
+    // 20191109
     public static void main(String[] args) {
         // Arreglos: tipos de declaracion
         String leyendasA[] = new String[9];
