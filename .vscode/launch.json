@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Arreglo",
+            "request": "launch",
+            "mainClass": "Arreglo",
+            "projectName": "Arreglo_5df45ef1"
+        }
+    ]
+}
