@@ -2,9 +2,7 @@ import java.util.Scanner;
 
 //
 /**
- * Ficha tecnica in : -99 para salir : R22savcxmnb@ :
- * R22sammnbvcx"mnbvcxzpytrwqmnbmnb@ : enteros out : operacion metodos :
- * funciones : mensaje de error : notas : exceptions
+ * Ficha tecnica in : notas : exceptions
  * https://www.geeksforgeeks.org/types-of-exception-in-java-with-examples/
  * enmascaramiento de entrada de línea de comando
  * https://es.switch-case.com/53985162
@@ -52,7 +50,7 @@ class Arreglo {
 
         imprimir("Despliega ecuación--");
         imprimeArreglo();
-        
+
         imprimir("Despliega datos del arreglo--");
         imprimeDatosArreglo();
     }
@@ -79,7 +77,6 @@ class Arreglo {
         }
     }
 
-
     public static void imprimeDatosArreglo() {
         for (int i = 1; i <= renglones; i++) {
             for (int j = 1; j <= orden; j++) {
@@ -95,7 +92,6 @@ class Arreglo {
             kIndiceLetraAB = 1;
         }
     }
-
 
     public static void ingresaArreglo() {
         for (int i = 1; i <= renglones; i++) {
