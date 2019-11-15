@@ -58,7 +58,7 @@ class Arreglo {
     // Metodos
     // m.imprimir(x)
     public static void imprimir(String agbCadena) {
-        System.out.println("---------------------------------" + agbCadena);
+        System.out.println("-------------------" + agbCadena);
     }
 
     public static void imprimeArreglo() {
@@ -87,7 +87,9 @@ class Arreglo {
                 // salta letra a,b,..,z
                 kIndiceLetraAB++;
             }
-            System.out.print(" = " + leyendasA[1 + orden] + i + "\n");
+            // System.out.print(" = " + leyendasA[1 + orden] +
+            // i + (datos[i][0]) + "\n");
+            System.out.print(" = " + datos[i][0] + "\n");
             // asigna letra indice mas 1 para resultado
             kIndiceLetraAB = 1;
         }
@@ -103,28 +105,11 @@ class Arreglo {
                 datos[i][j] = valor;
                 kIndiceLetraAB++;
             }
+            System.out.print("Desigualdad para " + leyendasA[1 + orden] + i + ":");
+            valor = leer.nextDouble();
+            datos[i][0] = valor;
             // asigna letra indice mas 1 para resultado
             kIndiceLetraAB = 1;
         }
     }
 }
-
-/*
- *
- * public static void main(String[]args) { //Arreglos: tipos de declaracion
- * //opc 1 //String leyendasA[]; //leyendasA = new String[5] //opc 2 //String
- * leyendasA[] = new String[5]; //opc 3 //int [a] = new int[5], int b[] = new
- * int[3]; //opc 4 //int a[] = {3,42,-1,23,55}; String leyendasA[] = new
- * String[9]; leyendasA[1]="a"; leyendasA[2]="b"; leyendasA[3]="c";
- * leyendasA[4]="d"; leyendasA[5]="e"; leyendasA[6]="f"; leyendasA[7]="g";
- * leyendasA[8]="h"; String leyendasXY[] = new String[6]; leyendasXY[1]="x";
- * leyendasXY[2]="y"; leyendasXY[3]="z"; leyendasXY[4]="w"; leyendasXY[5]="";
- * //desplegar /* //foreach for(String v : leyendasA){ for(String i :
- * leyendasXY){ System.out.println(v + i); } }
- */
-/*
- * //for next int r = 1, c = 2, contador = 0; for(int i = 1; i <= r; i++){
- * for(int j = 1; j <= c; j++){ System.out.print( leyendasA[i] + (i+contador) +
- * leyendasXY[i] + (i+contador) + " + " + leyendasA[i+1] + j + leyendasXY[i+1] +
- * j + " = " + leyendasA[i+2] + (i+contador) + "\n"); contador=+1; } }
- */
