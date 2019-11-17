@@ -15,8 +15,10 @@ class Arreglo {
     static double datos[][] = new double[orden + 1][orden + 1];
     static double valor = 0;
     static Scanner leer = new Scanner(System.in);
+    static double deltaG = 0, deltaX = 0, deltaY = 0, deltaPaso = 1, deltaSubtotal = 0;
+    static int direccionY = 0;
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // Inicializa
         // Arreglos: tipos de declaracion
         // incognitas
@@ -60,7 +62,7 @@ class Arreglo {
 
     // Metodos
     // m.imprimir(x)
-    public static void imprimir(String agbCadena) {
+    public static void imprimir(final String agbCadena) {
         System.out.println("-------------------" + agbCadena);
     }
 
@@ -100,33 +102,39 @@ class Arreglo {
 
     public static void computoDatosArreglo() {
         // inicializa
-        int deltaG = 0, deltaX = 0, deltaY = 0;
-        int direccionY = 0;
-
         for (int i = 1; i <= renglones; i++) {
             for (int j = 1; j <= orden; j++) {
+                // Sí fila 1 y columna 2 entonces baja
                 if (i == 1 && j == 2) {
-                    direccionY += 1;
-                    //System.out.print("orden 2 compute : " + direccionY);
-                }
-                System.out.print(datos[i][j]);
-                if (j != orden) {
-                    System.out.print(" + ");
-                }
-                if (i == 2 && j == 2) {
+                    direccionY += 1; // br
+                } else if (i == 2 && j == 2) {
                     direccionY -= 1;
-                    //System.out.println("orden 2 compute : " + direccionY);
                 }
-
-                // salta letra a,b,..,z
-                kIndiceLetraAB++;
+                System.out.print(datos[i + direccionY][j]); // br
+                deltaPaso = deltaPaso * datos[i + direccionY][j];
+                if (j != orden) { // br
+                    System.out.print(" * ");
+                }
+                kIndiceLetraAB++; // salta letra a,b,..,z
             }
-            // System.out.print(" = " + leyendasA[1 + orden] +
-            // i + (datos[i][0]) + "\n");
-            System.out.print(" = " + datos[i + direccionY][0] + "\n");
+            if (i == 1) { // subi-baja
+                direccionY -= 1;
+            } else if (i == 2) {
+                direccionY += 1;
+            }
+            if(i%2==0){
+                deltaPaso*=-1;
+            }
+            deltaSubtotal += deltaPaso;
+            // System.out.print(" = " + datos[i + direccionY][0] + "\n"); // br
+            System.out.print(" = " + deltaSubtotal + "\n"); // br
+            deltaPaso = 1;
             // asigna letra indice mas 1 para resultado
-            kIndiceLetraAB = 1;
+            kIndiceLetraAB = 1; // br
+            deltaG = deltaSubtotal;
         }
+        
+        System.out.print("Resultado : " + deltaG);
     }
 
     public static void ingresaArreglo() {
