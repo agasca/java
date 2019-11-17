@@ -110,7 +110,7 @@ class Arreglo {
                 } else if (i == 2 && j == 2) {
                     direccionY -= 1;
                 }
-                System.out.print(datos[i + direccionY][j]); // br
+                //System.out.print(datos[i + direccionY][j]); // br
                 deltaPaso = deltaPaso * datos[i + direccionY][j];
                 if (j != orden) { // br
                     System.out.print(" * ");
@@ -127,14 +127,13 @@ class Arreglo {
             }
             deltaSubtotal += deltaPaso;
             // System.out.print(" = " + datos[i + direccionY][0] + "\n"); // br
-            System.out.print(" = " + deltaSubtotal + "\n"); // br
+            //System.out.print(" = " + deltaSubtotal + "\n"); // br
             deltaPaso = 1;
             // asigna letra indice mas 1 para resultado
             kIndiceLetraAB = 1; // br
             deltaG = deltaSubtotal;
         }
-        
-        System.out.print("Resultado : " + deltaG);
+        System.out.println("Resultado : " + deltaG);
     }
 
     public static void ingresaArreglo() {
